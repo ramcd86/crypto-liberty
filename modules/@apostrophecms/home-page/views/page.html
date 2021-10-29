@@ -5,20 +5,59 @@
 
 {% extends "layout.html" %}
 {% block main %}
-
-<div class="row layout-block">
-  <div class="col-12 about-us">
-    {{ data.page.aboutTitle }}
-    {{ data.page.aboutSubtitle }}
-    {% area data.page, 'aboutArea' %}
+<nav>
+  <div class="container">
+    <ul>
+      <li class="home-link">home</li>
+      <li class="about-us-link">about us</li>
+      <li class="our-artists-link">our artists</li>
+      <li class="blog-link">blog</li>
+      <li class="contact-us-link">contact us</li>
+      <li class="open-sea-sink">OpenSea</li>
+    </ul>
+  </div>
+</nav>
+<div id="home" class="layout-block">
+  <div>
+    <div class="row">
+      <div class="col-12 logo">
+        <div class="logo__container">
+          <h1>CRYPTO</h1>
+          <h2>Liberty</h2>
+          <span>A new art collective.</span>
+        </div>
+      </div>
+    </div>
   </div>
 </div>
-<div class="row layout-block">
+<div id="about" class="row layout-block mt-5 mb-5">
+  <div class="col-12 about-us">
+    <div class="row">
+      <div class="col-lg-6 col-md-6 col-sm-12 p-5 about-us__title">
+        <div>
+          <h1>{{ data.page.aboutTitle }}</h1>
+          <h2>{{ data.page.aboutSubtitle }}</h2>
+        </div>
+      </div>
+      <div class="col-lg-6 col-md-6 col-sm-12 p-5 about-us__blurb">
+        {% area data.page, 'aboutArea' %}
+      </div>
+    </div>
+  </div>
+</div>
+<div id="artists" class="row layout-block mt-5 mb-5">
   <div class="col-12 our-artists">
     {{ data.page.ourArtistsTitle }}
     {{ data.page.ourArtistsSubtitle }}
     {% area data.page, 'ourArtistsArea' %}
   </div>
 </div>
+<div id="blog" class="row layout-block mt-5 mb-5">
+</div>
+<div id="contact" class="row layout-block mt-5 mb-5">
+</div>
+<div id="opensea" class="row layout-block mt-5 mb-5">
+</div>
+
 
 {% endblock %}

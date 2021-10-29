@@ -4,6 +4,16 @@
     {% area data.widget, 'columnOne' %}
   </div>
   <div class="col-lg-6 col-md-6 col-sm-12 our-artists__blurb">
-    {% area data.widget, 'columnTwo' %}
+    <div>{% area data.widget, 'columnTwo' %}</div>
+    <div>
+
+      {% if data.widget.faceBookUrl %}
+
+      {{data.widget.faceBookUrl}}
+
+      {% endif %}
+    </div>
+
   </div>
+
 </section>

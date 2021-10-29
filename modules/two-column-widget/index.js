@@ -37,7 +37,22 @@ module.exports = {
             }
           }
         }
+      },
+      faceBookUrl: {
+        type: 'string'
+      },
+      instagramUrl: {
+        type: 'string'
+      },
+      twitterUrl: {
+        type: 'string'
+      },
+      patreonUrl: {
+        type: 'string'
+      },
+      openSeaUrl: {
+        type: 'string'
       }
     }
   }
-}
+};
