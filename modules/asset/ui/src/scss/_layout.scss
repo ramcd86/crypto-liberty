@@ -1,0 +1,60 @@
+
+
+body {
+  font-family: 'Sen', sans-serif;
+  font-size: 10px;
+  background-color: $black;
+  color: $skyplum;
+}
+
+h1 {
+  font-family: 'Bebas Neue', sans-serif;
+  font-size: 144px;
+}
+
+h2 {
+  font-size: 96px;
+}
+
+h3 {
+  font-family: 'Bebas Neue', sans-serif;
+  font-size: 144px;
+  color: $gold;
+}
+
+p {
+  font-size: 18px;
+}
+
+.layout-block {
+  min-height: 100vh;
+}
+
+.our-artists {
+  div {
+    &:nth-child(odd) {
+      .our-artists__avatar {
+        order: 1;
+      }
+
+      .our-artists__blurb {
+        order: 2;
+      }
+    }
+
+    :nth-child(even) {
+      .our-artists__avatar {
+        order: 2;
+      }
+
+      .our-artists__blurb {
+        order: 1;
+      }
+    }
+  }
+
+  &__avatar {}
+
+  &__blurb {}
+
+}

@@ -1,0 +1,27 @@
+{# Automatically extends the right outer layout and also handles AJAX siutations #}
+{% extends data.outerLayout %}
+
+{% set title = data.piece.title or data.page.title %}
+{% block title %}
+  {{ title }}
+  {% if not title %}
+    {{ apos.log('Looks like you forgot to override the title block in a template that does not have access to an Apostrophe page or piece.') }}
+  {% endif %}
+{% endblock %}
+
+{% block beforeMain %}
+<div class="container">
+  <header>
+
+  </header>
+  <main>
+    {% endblock %}
+    {% block main %}
+    {% endblock %}
+    {% block afterMain %}
+  </main>
+  <footer>
+  
+  </footer>
+</div>
+{% endblock %}

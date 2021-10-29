@@ -1,0 +1,9 @@
+{# modules/two-column-widget/views/widget.html #}
+<section class="row">
+  <div class="col-lg-6 col-md-6 col-sm-12 our-artists__avatar">
+    {% area data.widget, 'columnOne' %}
+  </div>
+  <div class="col-lg-6 col-md-6 col-sm-12 our-artists__blurb">
+    {% area data.widget, 'columnTwo' %}
+  </div>
+</section>

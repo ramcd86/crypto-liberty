@@ -1,0 +1,24 @@
+{#
+  This is an example home page template. It inherits and extends a layout template
+  that lives in the top-level views/ folder for convenience
+#}
+
+{% extends "layout.html" %}
+{% block main %}
+
+<div class="row layout-block">
+  <div class="col-12 about-us">
+    {{ data.page.aboutTitle }}
+    {{ data.page.aboutSubtitle }}
+    {% area data.page, 'aboutArea' %}
+  </div>
+</div>
+<div class="row layout-block">
+  <div class="col-12 our-artists">
+    {{ data.page.ourArtistsTitle }}
+    {{ data.page.ourArtistsSubtitle }}
+    {% area data.page, 'ourArtistsArea' %}
+  </div>
+</div>
+
+{% endblock %}
