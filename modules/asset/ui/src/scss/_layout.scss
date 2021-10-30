@@ -7,7 +7,6 @@ body {
   color: $skyplum;
   background-image: url('../../images/headerbg.jpg');
   background-repeat: no-repeat;
-  background-size: contain;
   background-position: center top;
   margin: 0;
   padding: 0;
@@ -65,6 +64,21 @@ nav {
       letter-spacing: 1px;
       color: $gold;
       margin-right: 30px;
+
+      a {
+        color: $gold;
+        text-decoration: none;
+
+        &:hover {
+          color: $skyplum;
+          text-decoration: none;
+        }
+
+        &:visited {
+          color: $gold;
+          text-decoration: none;
+        }
+      }
 
       &:hover {
         color: $skyplum;
@@ -135,9 +149,11 @@ nav {
 
   &__title {
     text-align: center;
+
     h1 {
       line-height: 55px;
     }
+
     h2 {
       padding-bottom: 50px;
       border-bottom: 1px solid $gold;
@@ -153,6 +169,7 @@ nav {
       font-size: 34px;
       color: $gold;
     }
+
     p {
       font-size: 18px;
     }
@@ -173,5 +190,42 @@ nav {
     display: flex;
     align-items: center;
     min-height: 100vh;
+  }
+}
+
+.article-page {
+  text-align: left;
+  
+  h1 {
+    text-align: left;
+    border-bottom: 1px solid $gold;
+  }
+  h2 {
+    text-align: left;
+  }
+  h3 {
+    text-align: left;
+    font-size: 55px;
+    a {
+      color: $skyplum;
+      text-decoration: none;
+      &:hover {
+        color: $gold;
+        text-decoration: underline;
+      }
+      &:visited {
+        color: $skyplum;
+        text-decoration: none;
+      }
+    }
+  }
+  h4 {
+    text-align: left;
+    font-size: 24px;
+    color: $gold;
+  }
+  p {
+    text-align: left;
+    font-size: 18px;
   }
 }

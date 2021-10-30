@@ -1,0 +1,54 @@
+{# modules/article-page/views/index.html #}
+
+{% extends "layout.html" %}
+{% import '@apostrophecms/pager:macros.html' as pager with context %}
+
+{% block main %}
+
+<nav>
+  <div class="container">
+    <ul>
+      <li class="home-link"><a href="/">home</a></li>
+      <li class="about-us-link"><a href="/#about">about us</a></li>
+      <li class="our-artists-link"><a href="/#artists">our artists</a></li>
+      <li><a href="/news">news</a></li>
+      <li class="contact-us-link"><a href="/#contact">contact us</a></li>
+      <li class="open-sea-sink"><a href="/#opensea">OpenSea</a></li>
+    </ul>
+  </div>
+</nav>
+
+<div id="articles" class="layout-block">
+  <div>
+    <div class="row mt-5">
+      <div class="col-12 article-page mt-5">
+        <h1 class="mb-5">{{ data.page.title }}</h1>
+        {% for article in data.pieces %}
+        <div class="row">
+          <div class="col-1">
+          </div>
+          <div class="col-10">
+            <article class="mb-5">
+              <h4>on {{ article.date }} by {{ article.author }}</h4>
+              <h3>
+                <a href="{{ article._url }}">{{ article.title }}</a>
+              </h3>
+              <p>{{ article.subtitle }}</p>
+            </article>
+          </div>
+        </div>
+        {% endfor %}
+        {{ pager.render({
+          page: data.currentPage,
+          total: data.totalPages,
+          class: 'blog-pager'
+        }, data.url) }}
+      </div>
+    </div>
+  </div>
+</div>
+
+
+
+
+{% endblock %}
