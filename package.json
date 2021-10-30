@@ -6,7 +6,7 @@
   "scripts": {
     "start": "set NODE_ENV=development&&node app",
     "dev": "set NODE_ENV=development&&nodemon",
-    "build": "NODE_ENV=production node app @apostrophecms/asset:build && postbuild",
+    "build": "NODE_ENV=production node app @apostrophecms/asset:build && npm run postbuild",
     "wbuild": "set NODE_ENV=production&&node app @apostrophecms/asset:build",
     "serve": "NODE_ENV=production node app",
     "wserve": "set NODE_ENV=production&&node app",
