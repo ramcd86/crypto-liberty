@@ -1,8 +1,5 @@
 export default () => {
   const main = () => {
-    const routeHome = () => {
-      window.location = window.location.origin;
-    };
     const links = [
       (document.querySelector('.home-link') || undefined),
       (document.querySelector('.about-us-link') || undefined),
@@ -28,8 +25,6 @@ export default () => {
             block: "center"
           });
         });
-      } else {
-        routeHome();
       }
     });
 
