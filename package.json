@@ -6,12 +6,13 @@
   "scripts": {
     "start": "set NODE_ENV=development&&node app",
     "dev": "set NODE_ENV=development&&nodemon",
-    "build": "NODE_ENV=production node app @apostrophecms/asset:build",
+    "build": "NODE_ENV=production node app @apostrophecms/asset:build && postbuild",
     "wbuild": "set NODE_ENV=production&&node app @apostrophecms/asset:build",
     "serve": "NODE_ENV=production node app",
     "wserve": "set NODE_ENV=production&&node app",
     "release": "npm install && npm run build && node app @apostrophecms/migration:migrate",
-    "wrelease": "npm install && npm run wbuild && node app @apostrophecms/migration:migrate"
+    "wrelease": "npm install && npm run wbuild && node app @apostrophecms/migration:migrate",
+    "postbuild": "cp -a public/images/. public/apos-frontend/releases/images"
   },
   "nodemonConfig": {
     "delay": 1000,
