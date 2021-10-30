@@ -34,3 +34,4 @@ require('apostrophe')({
     'default-page': {}
   }
 });
+console.log(process.env);
