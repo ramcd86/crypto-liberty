@@ -81,6 +81,15 @@ nav {
   display: flex;
   align-items: center;
 
+  &__lady-liberty {
+    background-image: url('../../images/clib.jpg');
+    background-position: center top;
+    width: 300px;
+    height: 400px;
+    background-repeat: no-repeat;
+    width: 100%;
+  }
+
   &__container {
     width: 100%;
     text-align: center;
@@ -121,6 +130,17 @@ nav {
       .our-artists__blurb {
         order: 1;
       }
+    }
+  }
+
+  &__title {
+    text-align: center;
+    h1 {
+      line-height: 55px;
+    }
+    h2 {
+      padding-bottom: 50px;
+      border-bottom: 1px solid $gold;
     }
   }
 
