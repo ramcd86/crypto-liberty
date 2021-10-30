@@ -146,7 +146,17 @@ nav {
 
   &__avatar {}
 
-  &__blurb {}
+  &__blurb {
+    h2 {
+      text-align: left;
+      font-family: 'Bebas Neue', sans-serif;
+      font-size: 34px;
+      color: $gold;
+    }
+    p {
+      font-size: 18px;
+    }
+  }
 
 }
 
