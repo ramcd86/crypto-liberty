@@ -8,6 +8,7 @@ body {
   background-image: url('../../images/headerbg.jpg');
   background-repeat: no-repeat;
   background-position: center top;
+  background-size: 100% auto;
   margin: 0;
   padding: 0;
 }
@@ -163,7 +164,9 @@ nav {
   &__avatar {}
 
   &__blurb {
+
     h2 {
+      padding-top: 10px;
       text-align: left;
       font-family: 'Bebas Neue', sans-serif;
       font-size: 34px;
@@ -194,6 +197,10 @@ nav {
     }
   }
 
+  &__container {
+    background-color: $slate;
+  }
+
 }
 
 .about-us {
@@ -206,6 +213,7 @@ nav {
   }
 
   &__blurb {
+    background-color: $slate;
     display: flex;
     align-items: center;
     min-height: 100vh;
