@@ -32,6 +32,7 @@
       </div>
     </div>
   </div>
+  {% if data.page.aboutTitle %}
   <div id="about" class="row layout-block mt-5 mb-5">
     <div class="col-12 about-us">
       <div class="row">
@@ -47,6 +48,8 @@
       </div>
     </div>
   </div>
+  {% endif %}
+  {% if data.page.ourArtistsTitle %}
   <div class="row layout-block mt-5 mb-5">
     <div class="col-12 our-artists">
       <div id="artists" class="our-artists__title mt-5 mb-5">
@@ -56,8 +59,11 @@
       {% area data.page, 'ourArtistsArea' %}
     </div>
   </div>
-  <div id="contact" class="row layout-block mt-5 mb-5">
-
+  {% endif %}
+</div>
+<div class="container-fluid">
+  {% if data.page.contactUsTitle %}
+  <div id="contact" class="row layout-block mt-5">
     <div class="col-3"></div>
     <div class="col-6 contact-us">
       <div class="row">
@@ -71,10 +77,8 @@
       </div>
     </div>
   </div>
+  {% endif %}
 </div>
-
-
-<div class="contact-us-bg"></div>
 
 
 {% endblock %}
