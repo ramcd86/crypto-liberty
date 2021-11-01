@@ -17,37 +17,37 @@
     </ul>
   </div>
 </nav>
-
-<div id="articles" class="layout-block">
-  <div>
-    <div class="row mt-5">
-      <div class="col-12 article-page mt-5">
-        <h1 class="mb-5">{{ data.page.title }}</h1>
-        {% for article in data.pieces %}
-        <div class="row">
-          <div class="col-1">
+<div class="container">
+  <div id="articles" class="layout-block">
+    <div>
+      <div class="row mt-5">
+        <div class="col-12 article-page mt-5">
+          <h1 class="mb-5">{{ data.page.title }}</h1>
+          {% for article in data.pieces %}
+          <div class="row">
+            <div class="col-1">
+            </div>
+            <div class="col-10">
+              <article class="mb-5">
+                <h4>on {{ article.date }} by {{ article.author }}</h4>
+                <h3>
+                  <a href="{{ article._url }}">{{ article.title }}</a>
+                </h3>
+                <p>{{ article.subtitle }}</p>
+              </article>
+            </div>
           </div>
-          <div class="col-10">
-            <article class="mb-5">
-              <h4>on {{ article.date }} by {{ article.author }}</h4>
-              <h3>
-                <a href="{{ article._url }}">{{ article.title }}</a>
-              </h3>
-              <p>{{ article.subtitle }}</p>
-            </article>
-          </div>
+          {% endfor %}
+          {{ pager.render({
+            page: data.currentPage,
+            total: data.totalPages,
+            class: 'blog-pager'
+          }, data.url) }}
         </div>
-        {% endfor %}
-        {{ pager.render({
-          page: data.currentPage,
-          total: data.totalPages,
-          class: 'blog-pager'
-        }, data.url) }}
       </div>
     </div>
   </div>
 </div>
-
 
 
 

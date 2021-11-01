@@ -6,7 +6,7 @@ export default () => {
       (document.querySelector('.our-artists-link') || undefined),
       (document.querySelector('.blog-link') || undefined),
       (document.querySelector('.contact-us-link') || undefined),
-      (document.querySelector('.open-sea-sink') || undefined)
+      // (document.querySelector('.open-sea-sink') || undefined)
     ];
     const areas = [
       (document.querySelector('#home') || undefined),
@@ -14,7 +14,7 @@ export default () => {
       (document.querySelector('#artists') || undefined),
       (document.querySelector('#blog') || undefined),
       (document.querySelector('#contact') || undefined),
-      (document.querySelector('#opensea') || undefined)
+      // (document.querySelector('#opensea') || undefined)
     ];
 
     links.forEach((el, i) => {

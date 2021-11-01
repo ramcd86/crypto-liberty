@@ -13,6 +13,8 @@ body {
   padding: 0;
 }
 
+
+
 h1 {
   font-family: 'Bebas Neue', sans-serif;
   font-size: 144px;
@@ -159,6 +161,10 @@ nav {
       padding-bottom: 50px;
       border-bottom: 1px solid $gold;
     }
+
+    p {
+      color: $skyplum;
+    }
   }
 
   &__avatar {}
@@ -218,6 +224,27 @@ nav {
     align-items: center;
     min-height: 100vh;
   }
+}
+
+.contact-us-bg {
+  position: absolute;
+  z-index: -1;
+  top: 380vh;
+  width: 100%;
+  height: 100vh;
+  background-image: url('../../images/headerbg.jpg');
+  background-repeat: no-repeat;
+  background-position: center top;
+  background-size: 100% auto;
+  transform: rotate(180deg);
+}
+
+.contact-us {
+  position: relative;
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+
 }
 
 .article-page {

@@ -58,6 +58,21 @@ module.exports = {
             }
           }
         }
+      },
+      contactUsTitle: {
+        type: 'string'
+      },
+      contactUsSubtitle: {
+        type: 'string'
+      },
+      contactUsArea: {
+        type: 'area',
+        options: {
+          widgets: {
+            '@apostrophecms/rich-text': {
+            }
+          }
+        }
       }
     },
     group: {
@@ -69,7 +84,10 @@ module.exports = {
           'aboutArea',
           'ourArtistsTitle',
           'ourArtistsSubtitle',
-          'ourArtistsArea'
+          'ourArtistsArea',
+          'contactUsTitle',
+          'contactUsSubtitle',
+          'contactUsArea'
         ]
       }
     }
