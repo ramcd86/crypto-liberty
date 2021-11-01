@@ -53,30 +53,28 @@
         <h1>{{ data.page.ourArtistsTitle }}</h1>
         <h2>{{ data.page.ourArtistsSubtitle }}</h2>
       </div>
-
       {% area data.page, 'ourArtistsArea' %}
     </div>
   </div>
   <div id="contact" class="row layout-block mt-5 mb-5">
 
     <div class="col-3"></div>
-      <div class="col-6 contact-us">
-        <div class="row">
-          <div class="col-12 contact-us__container">
-            <div>
-              <h1>{{ data.page.contactUsTitle }}</h1>
-              <h2>{{ data.page.contactUsSubtitle }}</h2>
-              {% area data.page, 'contactUsArea' %}
-            </div>
+    <div class="col-6 contact-us">
+      <div class="row">
+        <div class="col-12 contact-us__container">
+          <div>
+            <h1>{{ data.page.contactUsTitle }}</h1>
+            <h2>{{ data.page.contactUsSubtitle }}</h2>
+            {% area data.page, 'contactUsArea' %}
           </div>
         </div>
       </div>
     </div>
   </div>
 </div>
-{# <div id="opensea" class="row layout-block mt-5 mb-5">
-</div> #}
-    <div class="contact-us-bg"></div>
+
+
+<div class="contact-us-bg"></div>
 
 
 {% endblock %}

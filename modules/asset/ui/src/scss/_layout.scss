@@ -43,6 +43,7 @@ p {
 
 nav {
   position: fixed;
+  z-index: 10;
   top: 0;
   left: 0;
   width: 100%;
@@ -185,17 +186,21 @@ nav {
   }
 
   &__social {
-    display: block; 
+    display: block;
+
     a {
       padding-left: 5px;
       padding-right: 5px;
       color: $gold;
+
       i {
         font-size: 16px;
       }
+
       &:visited {
         color: $gold;
       }
+
       &:hover {
         color: $skyplum;
         text-decoration: none;
@@ -229,7 +234,7 @@ nav {
 .contact-us-bg {
   position: absolute;
   z-index: -1;
-  top: 380vh;
+  top: 400vh;
   width: 100%;
   height: 100vh;
   background-image: url('../../images/headerbg.jpg');
@@ -245,41 +250,93 @@ nav {
   display: flex;
   align-items: center;
 
+  &__container {
+    padding: {
+      top: 85px;
+      bottom: 25px;
+      left: 25px;
+      right: 25px;
+    }
+
+    border-bottom: 1px solid $gold;
+    background-color: $slate;
+    box-shadow: 0px 2px 5px 1px rgba(0, 0, 0, 0.35);
+
+    h1 {
+      line-height: 55px;
+    }
+  }
 }
 
 .article-page {
   text-align: left;
-  
+
   h1 {
     text-align: left;
     border-bottom: 1px solid $gold;
   }
+
   h2 {
     text-align: left;
   }
+
   h3 {
     text-align: left;
     font-size: 55px;
+
     a {
       color: $skyplum;
       text-decoration: none;
+
       &:hover {
         color: $gold;
         text-decoration: underline;
       }
+
       &:visited {
         color: $skyplum;
         text-decoration: none;
       }
     }
   }
+
   h4 {
     text-align: left;
     font-size: 24px;
     color: $gold;
   }
+
   p {
     text-align: left;
     font-size: 18px;
+  }
+}
+
+.footer {
+  height: 300px;
+  border-top: 1px solid $gold;
+  background-color: $slate;
+
+  h2 {
+    font-family: 'Bebas Neue', sans-serif;
+    color: $skyplum;
+    font-size: 60px;
+    line-height: 10px;
+    margin-top: 60px;
+  }
+
+  h3 {
+    font-family: 'Sen', sans-serif;
+    color: $skyplum;
+    font-size: 40px;
+  }
+
+  span {
+    display: block;
+    font-size: 18px;
+    text-align: center;
+    color: $gold;
+    font-size: 12px;
+    letter-spacing: 5px;
   }
 }

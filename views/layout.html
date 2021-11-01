@@ -3,10 +3,10 @@
 
 {% set title = data.piece.title or data.page.title %}
 {% block title %}
-  {{ title }}
-  {% if not title %}
-    {{ apos.log('Looks like you forgot to override the title block in a template that does not have access to an Apostrophe page or piece.') }}
-  {% endif %}
+{{ title }}
+{% if not title %}
+{{ apos.log('Looks like you forgot to override the title block in a template that does not have access to an Apostrophe page or piece.') }}
+{% endif %}
 {% endblock %}
 
 {% block extraHead %}
@@ -19,7 +19,7 @@
 <link rel="apple-touch-icon" sizes="144x144" href="../../images/icons/apple-icon-144x144.png">
 <link rel="apple-touch-icon" sizes="152x152" href="../../images/icons/apple-icon-152x152.png">
 <link rel="apple-touch-icon" sizes="180x180" href="../../images/icons/apple-icon-180x180.png">
-<link rel="icon" type="image/png" sizes="192x192"  href="../../images/icons//android-icon-192x192.png">
+<link rel="icon" type="image/png" sizes="192x192" href="../../images/icons//android-icon-192x192.png">
 <link rel="icon" type="image/png" sizes="32x32" href="../../images/icons/favicon-32x32.png">
 <link rel="icon" type="image/png" sizes="96x96" href="../../images/icons/favicon-96x96.png">
 <link rel="icon" type="image/png" sizes="16x16" href="../../images/icons/favicon-16x16.png">
@@ -31,18 +31,21 @@
 {% endblock %}
 
 {% block beforeMain %}
-
-  <header>
-
-  </header>
-  <main>
-    {% endblock %}
-    {% block main %}
-    {% endblock %}
-    {% block afterMain %}
-  </main>
-
-  <footer>
-  
-  </footer>
+<main>
+  {% endblock %}
+  {% block main %}
+  {% endblock %}
+  {% block afterMain %}
+</main>
+<footer class="footer">
+  <div class="container">
+    <div class="row mt-5">
+      <div class="col-12">
+        <h2>CRYPTO</h2>
+        <h3>Liberty</h3>
+        <span>A new art collective.</span>
+      </div>
+    </div>
+  </div>
+</footer>
 {% endblock %}
